@@ -1,0 +1,193 @@
+.container {
+  position: absolute;
+  top: 150px;
+  left: 100px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  width: 600px;
+  height: 700px;
+  background-color: var(--color-background-secondary);
+  border-radius: 10px;
+  padding: 100px 60px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  animation: slideIn 0.4s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logoSection {
+  display: flex;
+  justify-content: center;
+  gap: var(--gap-1);
+}
+
+.logoImage {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logoImage:hover {
+  transform: scale(1.05);
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: var(--font-inter);
+  color: var(--color-text-primary);
+  animation: fadeInUp 0.5s ease-out 0.2s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-1);
+  text-align: left;
+  animation: fadeInUp 0.5s ease-out 0.3s both;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-1);
+}
+
+.input {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  background-color: var(--color-input-primary);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #f5c451;
+  box-shadow: 0 0 0 3px rgba(245, 196, 81, 0.1);
+  transform: translateY(-1px);
+}
+
+.input.error {
+  border-color: #ff6b6b;
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+}
+
+.errorText {
+  color: #ff6b6b;
+  font-size: 12px;
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-1);
+  animation: fadeInUp 0.5s ease-out 0.4s both;
+}
+
+.button {
+  height: 50px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: var(--color-background-tertiary);
+  color: var(--color-text-quaternary);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.googleButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-1);
+  height: 50px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: var(--color-foreground-primary);
+  color: var(--color-text-quaternary);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.googleButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.googleButton:active {
+  transform: translateY(0);
+}
+
+.bottomText {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-text-tertiary);
+  animation: fadeInUp 0.5s ease-out 0.5s both;
+}
+
+.bottomTextLink {
+  color: var(--color-text-primary);
+  text-decoration: underline;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bottomTextLink:hover {
+  color: #f5c451;
+  transform: translateY(-1px);
+}

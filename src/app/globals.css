@@ -1,0 +1,56 @@
+@import 'tailwindcss';
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+:root {
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'Inter', monospace;
+  --font-inter: 'Inter', sans-serif;
+
+  --color-background-primary: #080808;
+  --color-background-secondary: #242424;
+  --color-background-tertiary: #f5c451;
+
+  --color-foreground-primary: #ffffff;
+  --color-foreground-secondary: #ededed;
+
+  --color-input-primary: #1c1d1c;
+
+  --color-text-primary: #f5c451;
+  --color-text-secondary: #ededed;
+  --color-text-tertiary: #969696;
+  --color-text-quaternary: #000000;
+
+  --color-border-primary: #f5c451;
+
+  --gap-1: 10px;
+  --gap-2: 20px;
+  --gap-3: 30px;
+  --gap-4: 40px;
+  --gap-5: 50px;
+  --gap-6: 60px;
+  --gap-7: 70px;
+  --gap-8: 80px;
+  --gap-9: 90px;
+  --gap-10: 100px;
+}
+
+@theme inline {
+  --color-background: var(--color-background-primary);
+  --color-foreground: var(--color-foreground-primary);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-inter: var(--font-inter);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--color-background-primary);
+    --foreground: var(--color-foreground-primary);
+  }
+}
+
+body {
+  background: var(--color-background-primary);
+  color: var(--color-foreground-primary);
+  font-family: var(--font-sans);
+}

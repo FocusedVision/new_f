@@ -1,0 +1,153 @@
+.container {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+}
+
+.mainContent,
+.authContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition:
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+}
+
+.fadeIn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fadeOut {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.logoSection {
+  display: flex;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  gap: var(--gap-1);
+}
+
+.logoImage {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: var(--gap-3);
+  position: absolute;
+  top: 350px;
+  left: 100px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--color-foreground-primary);
+  color: var(--color-text-primary);
+}
+
+.description {
+  max-width: 700px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-foreground-secondary);
+}
+
+.button {
+  width: 200px;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid #f5c451;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  box-shadow: 0 0 10px 0 rgba(245, 196, 81, 0.5);
+  transform: translateY(-2px);
+}
+
+.imageSection {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 90%;
+  background-image: url('/mask.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  transform: rotate(-15deg);
+  z-index: -10;
+  transition: transform 0.3s ease;
+}
+
+.bottomSection {
+  position: absolute;
+  bottom: 80px;
+  width: 100%;
+  padding: 0 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.separator {
+  height: 1px;
+  margin-bottom: 1rem;
+  background-color: #ffffff;
+  opacity: 0.2;
+  width: 100%;
+}
+
+.website {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-foreground-secondary);
+}
+
+@media (max-width: 768px) {
+  .logoSection {
+    top: 50px;
+    left: 50px;
+  }
+
+  .infoSection {
+    top: 250px;
+    left: 50px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .description {
+    font-size: 14px;
+    max-width: 290px;
+  }
+
+  .button {
+    width: 150px;
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  .imageSection {
+    width: 100%;
+    height: 50%;
+    transform: rotate(0deg);
+  }
+}
